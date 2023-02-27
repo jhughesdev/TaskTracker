@@ -329,6 +329,7 @@ void Tracker::OnDraw(std::shared_ptr<wxGraphicsContext> graphics)
                     break;
                 }
 
+
                 graphics->DrawRectangle(xLocMap[xLoc],yLocMap[mDrawMonthMap[i]] + 21 * j,150,20);
                 graphics->SetFont(smallFont,wxColour(mRedDaysText,mGreenDaysText,mBlueDaysText));
                 graphics->DrawText(mItemMap[mMonthDateMap[i]][j]->GetEventDescription(),

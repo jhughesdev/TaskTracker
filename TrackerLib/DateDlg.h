@@ -44,8 +44,6 @@ public:
 
     void OnOK(wxCommandEvent& event);
 
-    bool CheckValidDate(int year,int month, int days);
-
     /*
      * Get the refresh boolean
      * @return the refresh boolean

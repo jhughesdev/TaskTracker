@@ -329,7 +329,6 @@ void Tracker::OnDraw(std::shared_ptr<wxGraphicsContext> graphics)
                     break;
                 }
 
-
                 graphics->DrawRectangle(xLocMap[xLoc],yLocMap[mDrawMonthMap[i]] + 21 * j,150,20);
                 graphics->SetFont(smallFont,wxColour(mRedDaysText,mGreenDaysText,mBlueDaysText));
                 graphics->DrawText(mItemMap[mMonthDateMap[i]][j]->GetEventDescription(),
@@ -373,7 +372,6 @@ void Tracker::OnDraw(std::shared_ptr<wxGraphicsContext> graphics)
         graphics->SetFont(font, mTextColor);
 
         mYears[mCurrentYear - mDefaultYear]->Draw(graphics,mCurrentDate);
-
     }
 
 }
@@ -401,7 +399,6 @@ int Tracker::GetLeapYears(int year, int month)
             }
         }
     }
-
     return leapCount;
 }
 
@@ -693,6 +690,7 @@ void Tracker::Load(const wxString &filename)
     }
 }
 
+
 /**
  * Handle a node of type item.
  * @param node XML node
@@ -727,6 +725,7 @@ void Tracker::XmlEvent(wxXmlNode *node)
     }
 
 }
+
 
 /**
  * Save the tracker as a .tracker XML file.

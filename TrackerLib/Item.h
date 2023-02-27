@@ -71,20 +71,52 @@ public:
      */
     Tracker *GetTracker() {return mTracker;}
 
+    /**
+     * get the event day, overridden in derived class to make possible
+     * @return the event day
+     */
     virtual int GetEventDay() =0;
 
+    /**
+      * get the event month, overridden in derived class to make possible
+      * @return the event month
+      */
     virtual int GetEventMonth() =0;
 
+    /**
+      * get the event year, overridden in derived class to make possible
+      * @return the event year
+      */
     virtual int GetEventYear() =0;
 
+    /**
+     * Set the image name, overridden in derived class to make possible
+     * @param imageName the image name to set
+     */
     virtual void SetImageName(std::wstring imageName) =0;
 
+    /**
+     * Set the image name, overridden in derived class to make possible
+     * @return the image name
+     */
     virtual std::wstring GetImageName() =0;
 
+    /**
+     * Get the color, overridden in derived class to make possible
+     * @return the color
+     */
     virtual wxColour GetColor() =0;
 
+    /**
+     * Get the event type, overridden in derived class to make possible
+     * @return the event type
+     */
     virtual std::wstring GetEventType() =0;
 
+    /**
+     * Get the event description, overridden in derived class to make possible
+     * @return the event type
+     */
     virtual std::wstring GetEventDescription() =0;
 
     virtual wxXmlNode *XmlSave(wxXmlNode *node);

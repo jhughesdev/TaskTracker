@@ -82,12 +82,15 @@ private:
     /// The actual year
     int mActualYear = 1;
 
+    /// Week date map
     std::map<int,std::vector<int>> mWeekDateMap {{0,{0,0,0}}, {1,{0,0,0}}, {2,{0,0,0}},
             {3,{0,0,0}}, {4,{0,0,0}}, {5,{0,0,0}},
             {6,{0,0,0}}};
 
+    /// Month Date Map
     std::map<int,std::vector<int>> mMonthDateMap;
 
+    /// Map used for drawing the month
     std::map<int,int> mDrawMonthMap;
 
     /// Vector representing the current date
@@ -122,14 +125,34 @@ private:
 
 public:
 
+    /**
+     * Get the actual month
+     * @return the actual month
+     */
     int GetActualMonth() {return mActualMonth;}
 
+    /**
+     * Get the actual day
+     * @return the actual day
+     */
     int GetActualDay() {return mActualDay;}
 
+    /**
+     * Get the actual year
+     * @return the actual year
+     */
     int GetActualYear() {return mActualYear;}
 
+    /**
+     * Set the month date map
+     * @param map the map to set
+     */
     void SetMonthDateMap(std::map<int,std::vector<int>> map) {mMonthDateMap = map;}
 
+    /**
+     * Set the draw month map
+     * @param map the map to set
+     */
     void SetDrawMonthMap(std::map<int,int> map) {mDrawMonthMap = map;}
 
     void Load(const wxString& filename);

@@ -9,10 +9,9 @@
 #include <wx/valnum.h>
 #include "ProjectView.h"
 
-#include <utility>
 
 /**
- * Constructor
+ * Constructor for the Color Dlg box
  * @param parent The parent window we will center in
  * @param view the Project View
  * @param Tracker the Tracker
@@ -55,6 +54,7 @@ ColorDlg::ColorDlg(wxWindow* parent,ProjectView *view, Tracker tracker, int numb
 
 }
 
+
 /**
  * Handle an OK button press
  * @param event Button event
@@ -82,4 +82,3 @@ void ColorDlg::OnOK(wxCommandEvent& event)
         EndModal(wxID_OK);
     }
 }
-

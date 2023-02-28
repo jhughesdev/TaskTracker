@@ -81,6 +81,7 @@ void ProjectView::Initialize(wxFrame* parent)
 
 /**
 * Paint event, draws the window
+ * @param event The paint event
 */
 void ProjectView::OnPaint(wxPaintEvent & event)
 {
@@ -173,7 +174,7 @@ void ProjectView::OnRemoveAll(wxCommandEvent& event)
 
 /**
  * Change the state to day
- * @param event
+ * @param event The menu event
  */
 void ProjectView::ChangeStateDay(wxCommandEvent& event)
 {
@@ -183,7 +184,7 @@ void ProjectView::ChangeStateDay(wxCommandEvent& event)
 
 /**
  * Change the state to week
- * @param event
+ * @param event The menu event
  */
 void ProjectView::ChangeStateWeek(wxCommandEvent& event)
 {
@@ -193,7 +194,7 @@ void ProjectView::ChangeStateWeek(wxCommandEvent& event)
 
 /**
  * Change the state to month
- * @param event
+ * @param event The menu event
  */
 void ProjectView::ChangeStateMonth(wxCommandEvent& event)
 {
@@ -204,7 +205,7 @@ void ProjectView::ChangeStateMonth(wxCommandEvent& event)
 
 /**
  * Change the state to year
- * @param event
+ * @param event The menu event
  */
 void ProjectView::ChangeStateYear(wxCommandEvent& event)
 {
@@ -215,6 +216,7 @@ void ProjectView::ChangeStateYear(wxCommandEvent& event)
 
 /**
 * Change the current date of the tracker
+ * @param event The menu event
 */
 void ProjectView::ChangeCurrentDate(wxCommandEvent& event)
 {
@@ -237,6 +239,7 @@ void ProjectView::ChangeCurrentDate(wxCommandEvent& event)
 
 /**
  * Check if the amount of days are valid depending on the month given
+ * @param year the year
  * @param month the month represented as an int (1 for jan, 12 for dec)
  * @param days the amount of days for the month
  * @return true if valid, false if invalid

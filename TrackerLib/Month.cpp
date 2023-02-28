@@ -12,7 +12,10 @@
 using namespace std;
 
 
-/// normal font used for drawing days
+/**
+ * The normal sized font used for drawing
+ * @return font the font
+ */
 const wxFont font(wxSize(0, 20),
         wxFONTFAMILY_SWISS,
         wxFONTSTYLE_NORMAL,
@@ -21,6 +24,9 @@ const wxFont font(wxSize(0, 20),
 /**
  * Constructor
  * @param tracker The tracker this month is a member of
+ * @param days the amount of days in the month
+ * @param year the year the months is in
+ * @param name the name of the month
  */
  Month::Month(Tracker *tracker, int days, std::wstring name,Year* year) : mTracker(tracker), mName(name), mYear(year)
 {
@@ -39,6 +45,7 @@ const wxFont font(wxSize(0, 20),
  * @param scaleX optional param used for drawing all months in a year
  * @param scaleY optional param used for drawing all months in a year
  * @param yearMonth optional param used for drawing the year
+ * @param option option for view we are drawing with
  */
 void Month::Draw(std::shared_ptr<wxGraphicsContext> graphics, std::vector<int> date,
         double scaleX,double scaleY, int yearMonth,std::wstring option)

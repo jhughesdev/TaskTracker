@@ -16,7 +16,8 @@
  * Constructor
  * @param parent The parent window we will center in
  * @param view the Project View
- * @param Tracker the Tracker
+ * @param tracker the Tracker
+ * @param event the event
  */
 EventDlg::EventDlg(wxWindow* parent,ProjectView *view, Tracker tracker, std::shared_ptr<StandardEvent> event) :
     mTracker(tracker),mView(view), mEvent(event)

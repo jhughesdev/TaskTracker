@@ -10,6 +10,9 @@
 
 #include <wx/wx.h>
 
+/**
+ * The IDs used for event handlers
+ */
 enum IDs {
     IDM_ADDEVENTNORMAL = wxID_HIGHEST + 1,
     IDM_ADDEVENTWORKOUT

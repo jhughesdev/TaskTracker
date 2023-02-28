@@ -10,6 +10,9 @@
 
 #include "ProjectView.h"
 
+/**
+ * The main frame of the application
+ */
 class MainFrame : public wxFrame{
 private:
 

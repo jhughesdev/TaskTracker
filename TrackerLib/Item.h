@@ -62,6 +62,7 @@ public:
      * @param graphics the graphics to draw on
      * @param x the x location of the item
      * @param y the y location of the item
+     * @param option option to use when drawing
      */
     virtual void Draw(std::shared_ptr<wxGraphicsContext> graphics, int x, int y, std::wstring option) {};
 

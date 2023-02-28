@@ -44,9 +44,9 @@ public:
 
     void OnOK(wxCommandEvent& event);
 
-    /*
-     * Get the refresh boolean
-     * @return the refresh boolean
+    /**
+     * Get the refresh bool
+     * @return the refresh bool
      */
     bool GetRefresh() {return mRefresh;}
 

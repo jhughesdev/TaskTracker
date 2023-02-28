@@ -14,7 +14,7 @@
  * Constructor for the Color Dlg box
  * @param parent The parent window we will center in
  * @param view the Project View
- * @param Tracker the Tracker
+ * @param tracker the Tracker
  * @param number the number of the dialog box
  */
 ColorDlg::ColorDlg(wxWindow* parent,ProjectView *view, Tracker tracker, int number) : mTracker(tracker), mView(view),

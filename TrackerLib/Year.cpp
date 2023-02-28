@@ -11,7 +11,10 @@
 
 using namespace std;
 
-/// normal font used for drawing days
+/**
+ * The font used for drawing
+ * @return font the font
+ */
 const wxFont font(wxSize(0, 20),
         wxFONTFAMILY_SWISS,
         wxFONTSTYLE_NORMAL,
@@ -20,6 +23,7 @@ const wxFont font(wxSize(0, 20),
 /**
  * Constructor
  * @param tracker The tracker this year is a member of
+ * @param year the year number
  */
 Year::Year(Tracker *tracker, int year) : mTracker(tracker), mYearNum(year)
 {
@@ -38,8 +42,8 @@ Year::Year(Tracker *tracker, int year) : mTracker(tracker), mYearNum(year)
 /**
  * Draw the year
  * @param graphics the graphics to draw on
- * @param x the x location
- * @param y the y location
+ * @param date the date we are drawing
+ * @param option the option we are drawing with
  */
 void Year::Draw(std::shared_ptr<wxGraphicsContext> graphics, std::vector<int> date,std::wstring option)
 {

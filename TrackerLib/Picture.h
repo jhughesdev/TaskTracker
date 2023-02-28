@@ -53,7 +53,8 @@ public:
     void AddObserver(PictureObserver *observer);
     void RemoveObserver(PictureObserver *observer);
     void UpdateObservers();
-    void Draw(std::shared_ptr<wxGraphicsContext> graphics);
+
+//    void Draw(std::shared_ptr<wxGraphicsContext> graphics);
 
 };
 

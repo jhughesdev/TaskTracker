@@ -18,19 +18,28 @@ using namespace std::chrono;
 using namespace std;
 
 
-/// small font used for year view
+/**
+ * Smaller font
+ * @return smallFont the font
+ */
 const wxFont smallFont(wxSize(0, 14),
         wxFONTFAMILY_SWISS,
         wxFONTSTYLE_NORMAL,
         wxFONTWEIGHT_NORMAL);
 
-/// normal font used for drawing days
+/**
+ * The normal sized font used for drawing
+ * @return font the font
+ */
 const wxFont font(wxSize(0, 20),
         wxFONTFAMILY_SWISS,
         wxFONTSTYLE_NORMAL,
         wxFONTWEIGHT_NORMAL);
 
-/// bigger font used for drawing months, and year
+/**
+ * bigger font used for drawing months, and year
+ * @return bigFont the font
+ */
 const wxFont bigFont(wxSize(50, 50),
         wxFONTFAMILY_SWISS,
         wxFONTSTYLE_NORMAL,
@@ -63,9 +72,7 @@ void Tracker::Initialize()
 
 /**
  * Draw the Tracker
- * @param dc The device context to draw on
- * @param w The width
- * @param h The height
+ * @param graphics the graphics to draw on
  */
 void Tracker::OnDraw(std::shared_ptr<wxGraphicsContext> graphics)
 {
@@ -380,6 +387,7 @@ void Tracker::OnDraw(std::shared_ptr<wxGraphicsContext> graphics)
 /**
  * Given two years, get the amount of leap years that occur between 2022-year entered
  * @param year the ending year
+ * @param month the month
  * @return the number of leap years
  */
 int Tracker::GetLeapYears(int year, int month)
@@ -408,6 +416,7 @@ int Tracker::GetLeapYears(int year, int month)
  * This is used for the month and the week view
  * @param graphics the graphics to draw on
  * @param font the font to use
+ * @param dayStr the first three letters of the day
  * @param option the option to use week, so the numbers appear, default does not show numbers
  */
 void Tracker::DrawDaysText(std::shared_ptr<wxGraphicsContext> graphics, wxFont font, std::wstring dayStr,

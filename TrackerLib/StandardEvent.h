@@ -11,7 +11,9 @@
 #include "Item.h"
 #include <map>
 
-
+/**
+ * Class that describes standard events, which are stored in the Tracker
+ */
 class StandardEvent : public Item{
 private:
 
@@ -73,8 +75,16 @@ private:
 
 public:
 
+    /**
+     * Set the image name
+     * @param imageName the name to set
+     */
     void SetImageName(std::wstring imageName) override {mImageName = imageName;}
 
+    /**
+     * Get the image name
+     * @return the image name
+     */
     std::wstring GetImageName() override {return mImageName;}
 
     StandardEvent(Tracker* tracker,int year, int month, int day, std::wstring type,
@@ -82,20 +92,52 @@ public:
 
     void Draw(std::shared_ptr<wxGraphicsContext> graphics, int x, int y, std::wstring option) override;
 
+    /**
+     * Set the event day
+     * @param day the day to set
+     */
     void SetEventDay(int day) {mDay = day;}
 
+    /**
+     * Set the event month
+     * @param month the month to set
+     */
     void SetEventMonth(int month) {mMonth = month;}
 
+    /**
+     * Set the event year
+     * @param year the year to set
+     */
     void SetEventYear(int year) {mYear = year;}
 
+    /**
+     * Set the event description
+     * @param description the description to set
+     */
     void SetEventDescription(std::wstring description) {mDescription = description;}
 
+    /**
+     * Get the event day
+     * @return the event day
+     */
     virtual int GetEventDay() override {return mDay;}
 
+    /**
+     * Get the event month
+     * @return the event month
+     */
     virtual int GetEventMonth() override {return mMonth;}
 
+    /**
+     * Get the event year
+     * @return the event year
+     */
     virtual int GetEventYear() override {return mYear;}
 
+    /**
+     * Get the event color
+     * @return the event color
+     */
     virtual wxColour GetColor() override {return mTypeColorMap[mType];}
 
     /**
@@ -117,8 +159,16 @@ public:
     void SetEnd(std::wstring end) {mEndingTime = end;}
 
 
+    /**
+     * Get the event type
+     * @return the event type
+     */
     virtual std::wstring GetEventType() override {return mType;}
 
+    /**
+     * Get the event description
+     * @return the event description
+     */
     virtual std::wstring GetEventDescription() override {return mDescription;}
 
     virtual wxXmlNode *XmlSave(wxXmlNode *node) override;

@@ -56,6 +56,7 @@ private:
     /// All of the years in the Tracker
     std::vector<std::shared_ptr<Year>> mYears;
 
+    /// All of the items in the tracker
     std::map<std::vector<int>,std::vector<std::shared_ptr<Item>>> mItemMap;
 
     /// The current state
@@ -372,6 +373,7 @@ public:
 
     /**
     * Add an event to the tracker
+     * @param event the event to add
     */
     void AddEvent(std::shared_ptr<StandardEvent> event)
     {

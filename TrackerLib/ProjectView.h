@@ -12,6 +12,9 @@
 #include "PictureObserver.h"
 
 
+/**
+ * View class for the project
+ */
 class ProjectView : public wxWindow, public PictureObserver {
 private:
 
@@ -34,8 +37,15 @@ public:
 
     void OnEditColorPropertiesDayBox(wxCommandEvent& event);
 
+    /**
+     * Redraw the window, used now to support more views if wanted
+     */
     void UpdateObserver() override {Refresh();}
 
+    /**
+     * Set the tracker
+     * @param tracker the tracker to set
+     */
     void SetTracker(Tracker tracker) {mTracker = tracker;}
 
     void OnRemoveRecent(wxCommandEvent& event);

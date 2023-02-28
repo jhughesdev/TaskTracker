@@ -11,7 +11,10 @@ using namespace std;
 
 using namespace std::chrono;
 
-
+/**
+ * The normal sized font used for drawing
+ * @return font the font
+ */
 const wxFont font(wxSize(0, 20),
         wxFONTFAMILY_SWISS,
         wxFONTSTYLE_NORMAL,
@@ -25,6 +28,9 @@ const wxFont font(wxSize(0, 20),
  * @param month the month of the event
  * @param day the day of the event
  * @param type the type of the event
+ * @param description the event description
+ * @param start the start time of the event
+ * @param end the end time of the event
  */
 StandardEvent::StandardEvent(Tracker* tracker,int year, int month, int day, std::wstring type,
         std::wstring description, std::wstring start, std::wstring end) : Item(tracker),
@@ -39,6 +45,7 @@ StandardEvent::StandardEvent(Tracker* tracker,int year, int month, int day, std:
  * @param graphics the graphics to draw on
  * @param x the x location of where to draw
  * @param y the y location of where to draw
+ * @param option the option we are drawing with
  */
 void StandardEvent::Draw(std::shared_ptr<wxGraphicsContext> graphics, int x, int y, std::wstring option)
 {

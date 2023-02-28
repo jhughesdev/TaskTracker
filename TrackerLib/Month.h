@@ -44,8 +44,10 @@ private:
             {7,31},{8,31}, {9,30},
             {10,31}, {11,30}, {12,31}};
 
+    /// Month date map with key as int representing month, value as vector representing the date
     std::map<int,std::vector<int>> mMonthDateMap;
 
+    /// Map used to help with drawing the months
     std::map<int,int> mDrawMonthMap;
 
 public:

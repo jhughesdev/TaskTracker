@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['trackerapp_0',['TrackerApp',['../class_tracker_app.html',1,'']]]
+  ['colordlg_0',['ColorDlg',['../class_color_dlg.html',1,'']]]
 ];

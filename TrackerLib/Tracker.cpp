@@ -8,6 +8,7 @@
 #include "Item.h"
 #include "StandardEvent.h"
 #include "Year.h"
+#include "ProjectView.h"
 #include <chrono>
 #include <iostream>
 #include <wx/xml/xml.h>
@@ -696,7 +697,32 @@ void Tracker::Load(const wxString &filename)
         {
             XmlEvent(child);
         }
+        if(name == L"color")
+        {
+            XmlColor(child);
+        }
     }
+}
+
+
+/**
+ * Handle a node type of item for a color
+ * @param node XML node
+ */
+void Tracker::XmlColor(wxXmlNode *node)
+{
+    // handle the text colors
+    auto rt = node->GetAttribute(L"rText").ToInt(&mRedDaysText);
+    auto gt = node->GetAttribute(L"gText").ToInt(&mGreenDaysText);
+    auto bt = node->GetAttribute(L"bText").ToInt(&mBlueDaysText);
+
+    // handle the box colors
+    auto rb = node->GetAttribute(L"rBox").ToInt(&mRedDaysBox);
+    auto gb = node->GetAttribute(L"gBox").ToInt(&mGreenDaysBox);
+    auto bb = node->GetAttribute(L"bBox").ToInt(&mBlueDaysBox);
+
+    mTextColor = wxColour(mRedDaysText,mGreenDaysText,mBlueDaysText);
+    mBoxColor = wxColour(mRedDaysBox,mGreenDaysBox,mBlueDaysBox);
 }
 
 
@@ -759,6 +785,14 @@ void Tracker::Save(const wxString &filename)
         }
     }
 
+    auto colorNode = new wxXmlNode(wxXML_ELEMENT_NODE, L"color");
+    root->AddChild(colorNode);
+    colorNode->AddAttribute(L"rText", wxString::FromDouble(mRedDaysText));
+    colorNode->AddAttribute(L"gText", wxString::FromDouble(mGreenDaysText));
+    colorNode->AddAttribute(L"bText", wxString::FromDouble(mBlueDaysText));
+    colorNode->AddAttribute(L"rBox", wxString::FromDouble(mRedDaysBox));
+    colorNode->AddAttribute(L"gBox", wxString::FromDouble(mGreenDaysBox));
+    colorNode->AddAttribute(L"bBox", wxString::FromDouble(mBlueDaysBox));
 
     if(!xmlDoc.Save(filename, wxXML_NO_INDENTATION))
     {

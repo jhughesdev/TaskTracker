@@ -11,6 +11,7 @@
 class Item;
 class Year;
 class Event;
+class ProjectView;
 #include "Year.h"
 class StandardEvent;
 #include <map>
@@ -25,6 +26,9 @@ class Week;
  */
 class Tracker {
 private:
+
+    /// Pointer to the ProjectView
+    ProjectView* mView = nullptr;
 
     /// Custom RGB values to use for the days text
     int mRedDaysText = 1;
@@ -83,6 +87,9 @@ private:
     /// The actual year
     int mActualYear = 1;
 
+    /// Collection of ints representing the rgb values
+    std::vector<int> mColorVec;
+
     /// Week date map
     std::map<int,std::vector<int>> mWeekDateMap {{0,{0,0,0}}, {1,{0,0,0}}, {2,{0,0,0}},
             {3,{0,0,0}}, {4,{0,0,0}}, {5,{0,0,0}},
@@ -125,6 +132,12 @@ private:
             {L"Sat",7}};
 
 public:
+
+    /**
+     * Set the view of the tracker
+     * @param view the view to set
+     */
+     void SetPView(ProjectView* view) {mView = view;}
 
     /**
      * Get the actual month
@@ -226,6 +239,9 @@ public:
                             std::wstring dayStr = L"None",std::wstring option = L"Default");
 
     bool CheckLeapYear(int year);
+
+
+    void XmlColor(wxXmlNode *node);
 
     /**
      * Set the current year of the tracker

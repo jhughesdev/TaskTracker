@@ -76,6 +76,7 @@ void ProjectView::Initialize(wxFrame* parent)
             XRCID("SelectDate"));
 
     mTracker.Initialize();
+    mTracker.SetPView(this);
 
 }
 

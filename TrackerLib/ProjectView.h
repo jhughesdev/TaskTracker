@@ -37,6 +37,16 @@ public:
 
     void OnEditColorPropertiesDayBox(wxCommandEvent& event);
 
+    void OnWinterTheme(wxCommandEvent& event);
+
+    void OnSpringTheme(wxCommandEvent& event);
+
+    void OnSummerTheme(wxCommandEvent& event);
+
+    void OnFallTheme(wxCommandEvent& event);
+
+    void OnDarkTheme(wxCommandEvent& event);
+
     /**
      * Redraw the window, used now to support more views if wanted
      */

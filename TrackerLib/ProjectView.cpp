@@ -48,6 +48,26 @@ void ProjectView::Initialize(wxFrame* parent)
             XRCID("EditColorPropertiesDayBox"));
 
     parent->Bind(wxEVT_COMMAND_MENU_SELECTED,
+            &ProjectView::OnWinterTheme, this,
+            XRCID("WinterTheme"));
+
+    parent->Bind(wxEVT_COMMAND_MENU_SELECTED,
+            &ProjectView::OnSpringTheme, this,
+            XRCID("SpringTheme"));
+
+    parent->Bind(wxEVT_COMMAND_MENU_SELECTED,
+            &ProjectView::OnSummerTheme, this,
+            XRCID("SummerTheme"));
+
+    parent->Bind(wxEVT_COMMAND_MENU_SELECTED,
+            &ProjectView::OnFallTheme, this,
+            XRCID("FallTheme"));
+
+    parent->Bind(wxEVT_COMMAND_MENU_SELECTED,
+            &ProjectView::OnDarkTheme, this,
+            XRCID("DarkTheme"));
+
+    parent->Bind(wxEVT_COMMAND_MENU_SELECTED,
             &ProjectView::OnRemoveRecent, this,
             XRCID("RemoveRecent"));
 
@@ -331,4 +351,110 @@ void ProjectView::OnInstructions(wxCommandEvent& event)
             L"Task Tracker",
             wxOK,
             this);
+}
+
+
+/**
+ * Set the Tracker theme to winter
+ * @param event the event
+ */
+void ProjectView::OnWinterTheme(wxCommandEvent& event)
+{
+
+    std::vector<int> textColors = {173,216,230};
+    std::vector<int> boxColors = {220,220,220};
+
+    mTracker.SetRedDaysText(textColors[0]);
+    mTracker.SetGreenDaysText(textColors[1]);
+    mTracker.SetBlueDaysText(textColors[2]);
+
+    mTracker.SetRedDaysBox(boxColors[0]);
+    mTracker.SetGreenDaysBox(boxColors[1]);
+    mTracker.SetBlueDaysBox(boxColors[2]);
+
+    GetPicture()->UpdateObservers();
+}
+
+
+/**
+ * Set the Tracker theme to spring
+ * @param event the event
+ */
+void ProjectView::OnSpringTheme(wxCommandEvent& event)
+{
+    std::vector<int> textColors = {245,96,147};
+    std::vector<int> boxColors = {125,185,84};
+
+    mTracker.SetRedDaysText(textColors[0]);
+    mTracker.SetGreenDaysText(textColors[1]);
+    mTracker.SetBlueDaysText(textColors[2]);
+
+    mTracker.SetRedDaysBox(boxColors[0]);
+    mTracker.SetGreenDaysBox(boxColors[1]);
+    mTracker.SetBlueDaysBox(boxColors[2]);
+
+    GetPicture()->UpdateObservers();
+}
+
+
+/**
+ * Set the Tracker theme to summer
+ * @param event the event
+ */
+void ProjectView::OnSummerTheme(wxCommandEvent& event)
+{
+    std::vector<int> textColors = {0,159,247};
+    std::vector<int> boxColors = {254,245,169};
+
+    mTracker.SetRedDaysText(textColors[0]);
+    mTracker.SetGreenDaysText(textColors[1]);
+    mTracker.SetBlueDaysText(textColors[2]);
+
+    mTracker.SetRedDaysBox(boxColors[0]);
+    mTracker.SetGreenDaysBox(boxColors[1]);
+    mTracker.SetBlueDaysBox(boxColors[2]);
+
+    GetPicture()->UpdateObservers();
+}
+
+
+/**
+ * Set the Tracker theme to fall
+ * @param event the event
+ */
+void ProjectView::OnFallTheme(wxCommandEvent& event)
+{
+    std::vector<int> textColors = {224,159,62};
+    std::vector<int> boxColors = {84,11,14};
+
+    mTracker.SetRedDaysText(textColors[0]);
+    mTracker.SetGreenDaysText(textColors[1]);
+    mTracker.SetBlueDaysText(textColors[2]);
+
+    mTracker.SetRedDaysBox(boxColors[0]);
+    mTracker.SetGreenDaysBox(boxColors[1]);
+    mTracker.SetBlueDaysBox(boxColors[2]);
+
+    GetPicture()->UpdateObservers();
+}
+
+
+/**
+ * Set the Tracker theme to dark
+ * @param event the event
+ */
+void ProjectView::OnDarkTheme(wxCommandEvent& event)
+{
+    std::vector<int> textColors = {203, 195, 227};
+    std::vector<int> boxColors = {1,1,1};
+
+    mTracker.SetRedDaysText(textColors[0]);
+    mTracker.SetGreenDaysText(textColors[1]);
+    mTracker.SetBlueDaysText(textColors[2]);
+
+    mTracker.SetRedDaysBox(boxColors[0]);
+    mTracker.SetGreenDaysBox(boxColors[1]);
+    mTracker.SetBlueDaysBox(boxColors[2]);
+
+    GetPicture()->UpdateObservers();
 }

@@ -51,6 +51,29 @@
 					<label>_Edit Day Box Color</label>
 					<help></help>
 				</object>
+				<object class="wxMenu" name="EditTheme">
+					<label>Theme</label>
+					<object class="wxMenuItem" name="WinterTheme">
+						<label>Winter</label>
+						<help></help>
+					</object>
+					<object class="wxMenuItem" name="SpringTheme">
+						<label>Spring</label>
+						<help></help>
+					</object>
+					<object class="wxMenuItem" name="SummerTheme">
+						<label>Summer</label>
+						<help></help>
+					</object>
+					<object class="wxMenuItem" name="FallTheme">
+						<label>Fall</label>
+						<help></help>
+					</object>
+					<object class="wxMenuItem" name="DarkTheme">
+						<label>Dark</label>
+						<help></help>
+					</object>
+				</object>
 			</object>
 			<object class="wxMenu" name="Clear Menu">
 				<label>_Remove</label>

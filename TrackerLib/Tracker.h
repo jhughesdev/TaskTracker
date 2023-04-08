@@ -15,7 +15,6 @@ class ProjectView;
 #include "Year.h"
 class StandardEvent;
 #include <map>
-class Week;
 #include <wx/xml/xml.h>
 
 

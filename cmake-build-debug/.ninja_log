@@ -43,3 +43,16 @@
 16	8249	1680962218970101853	TrackerLib/CMakeFiles/TrackerLib.dir/ProjectView.cpp.o	2869041144cf03c9
 8249	8735	1680962219473263000	TrackerLib/libTrackerLib.a	3ff662033dfd5bcb
 8736	9538	1680962220249553022	TestTracker22.app/Contents/MacOS/TestTracker22	f061ba5e5f29fcee
+14	9485	1680962338426225744	CMakeFiles/TestTracker22.dir/TrackerApp.cpp.o	c5a25ebe1cc76b62
+25	17709	1680962346647579014	TrackerLib/CMakeFiles/TrackerLib.dir/Item.cpp.o	c22505361cf90d1a
+16	18066	1680962347002653950	TrackerLib/CMakeFiles/TrackerLib.dir/MainFrame.cpp.o	83dde47307f23bbc
+53	18733	1680962347672189739	TrackerLib/CMakeFiles/TrackerLib.dir/Year.cpp.o	26fa908171c0c2ca
+32	18789	1680962347726715598	TrackerLib/CMakeFiles/TrackerLib.dir/StandardEvent.cpp.o	b5887d8d6a5be692
+38	19153	1680962348094138965	TrackerLib/CMakeFiles/TrackerLib.dir/Month.cpp.o	33980b6430a30c7f
+35	19517	1680962348460734411	TrackerLib/CMakeFiles/TrackerLib.dir/ColorDlg.cpp.o	e2d0b7499a473982
+19	19572	1680962348514082364	TrackerLib/CMakeFiles/TrackerLib.dir/ProjectView.cpp.o	2869041144cf03c9
+66	19625	1680962348571023402	TrackerLib/CMakeFiles/TrackerLib.dir/EventDlg.cpp.o	fa4c22267b7c7718
+22	19732	1680962348678948362	TrackerLib/CMakeFiles/TrackerLib.dir/Tracker.cpp.o	89eeb46fc26ec660
+9486	21502	1680962350464355546	TrackerLib/CMakeFiles/TrackerLib.dir/DateDlg.cpp.o	5c85b4e15c22bca4
+21502	21891	1680962350868864000	TrackerLib/libTrackerLib.a	3ff662033dfd5bcb
+21891	22331	1680962351295677479	TestTracker22.app/Contents/MacOS/TestTracker22	f061ba5e5f29fcee
